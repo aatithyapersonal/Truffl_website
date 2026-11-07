@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta name="description" content="Join Truffl early access. AI voice agents that understand people, connect to your business, and take action."/>
+<meta name="theme-color" content="#FBF9F5"/>
+<title>Truffl — Early Access</title>
+<style>
+:root{color-scheme:light;--ink:#272421;--muted:#6E665F;--orange:#C45B36;--line:#E8DED5;--bg:#FBF9F5;--white:#FFF}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);line-height:1.5}
+main{max-width:875px;margin:0 auto;padding:28px 26px 95px}
+header{display:flex;align-items:center;justify-content:space-between;margin:0 0 78px}
+.logo{font-size:30px;font-weight:800;letter-spacing:-1.8px;text-decoration:none;color:var(--ink)}.logo b{color:var(--orange)}
+header small{color:#8C7061;letter-spacing:1.7px;font-weight:800;font-size:11px}
+.eyebrow{font-size:12px;text-transform:uppercase;font-weight:800;letter-spacing:2px;color:var(--orange);margin:0 0 16px}
+h1{font-size:clamp(42px,7vw,68px);letter-spacing:-3.4px;line-height:1.05;margin:0 0 22px;font-weight:790}
+h1 em{font-style:normal;color:var(--orange)}.intro{font-size:18px;color:var(--muted);max-width:680px;margin:0 0 26px}
+.features{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 36px}
+.features span{border-radius:30px;background:#FFF7ED;border:1px solid #EBD9C9;padding:7px 12px;font-weight:600;font-size:12px;color:#725345}
+.panel{border:1px solid var(--line);border-radius:22px;background:var(--white);padding:36px;box-shadow:0 16px 44px rgba(88,60,30,.045)}
+h2{font-size:28px;letter-spacing:-.9px;margin:0 0 6px}.sub{color:var(--muted);margin:0 0 26px;font-size:14px}
+form{display:grid;gap:23px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:19px}.field{display:flex;flex-direction:column;gap:8px}
+label.field-label,.section-label{font-size:13px;font-weight:700}
+input[type=text],input[type=email],select,textarea{padding:13px 14px;width:100%;font-family:inherit;font-size:15px;border:1px solid #D8CEC4;border-radius:11px;background:white;color:var(--ink);outline:none}
+input:focus,select:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px #F9E7DC}
+textarea{min-height:88px;resize:vertical}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:11px 16px;margin-top:12px}
+.choices label,.consent{display:flex;align-items:flex-start;gap:9px;font-size:13px;color:#4F4742;cursor:pointer}
+input[type=checkbox]{width:16px;height:16px;accent-color:var(--orange);margin:2px 0 0;flex:none}
+.hint{font-size:12px;color:#867C72;font-weight:400}
+.consent{border-top:1px solid var(--line);padding-top:21px;line-height:1.6}
+button{border:0;background:var(--ink);color:#fff;cursor:pointer;border-radius:12px;font-size:15px;font-weight:760;padding:15px 18px}
+button:hover{background:#4D4036}button:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.foot{font-size:12px;color:#90847B;text-align:center;margin:27px 0}.foot a{color:#7C5B47}
+.message{display:none}.message.visible{display:block}.message .emoji{font-size:42px;line-height:1.2}
+.message h2{font-size:36px;margin:18px 0 10px}.message p{max-width:560px;color:var(--muted);font-size:17px}
+.message a{color:var(--orange);font-weight:720}.notice{background:#FFF2E9;border:1px solid #F1C3A6;padding:12px 15px;border-radius:10px;color:#793D25;font-size:13px;margin:0 0 22px}
+.trap{position:absolute;left:-9999px;opacity:0}
+@media(max-width:650px){main{padding:24px 16px 60px}header{margin-bottom:49px}.panel{padding:22px 18px}.grid,.choices{grid-template-columns:1fr}h1{letter-spacing:-2.2px}.intro{font-size:16px}.features{margin-bottom:24px}}
+</style>
+</head>
+<body>
+<main>
+<header><a class="logo" href="https://trufflinnovations.in/" aria-label="Truffl homepage">truffl<b>.</b></a><small>EARLY ACCESS</small></header>
+<p class="eyebrow">A more human future for voice AI</p>
+<h1>Every conversation<br>deserves to feel <em>human.</em></h1>
+<p class="intro">We're opening early access to Truffl — voice AI that understands people, works with business context, and turns conversations into meaningful actions.</p>
+<div class="features"><span>Hindi · Hinglish · English</span><span>Connected business knowledge</span><span>Real workflow actions</span><span>Context-aware human handoffs</span></div>
+<section id="form-section" class="panel" aria-labelledby="form-heading">
+<h2 id="form-heading">Get early access</h2>
+<p class="sub">Tell us a little about your team. This takes about a minute.</p>
+<div id="error-note" class="notice" role="alert" hidden>We couldn't save your request. Please check your details and try again.</div>
+<form id="signup" method="post" accept-charset="utf-8" action="https://kuelcfztccmaigxvfrbo.supabase.co/functions/v1/truffl-early-access?source=direct">
+<div class="grid">
+<div class="field"><label class="field-label" for="full_name">Full name *</label><input id="full_name" type="text" name="full_name" placeholder="Your name" autocomplete="name" minlength="2" maxlength="120" required></div>
+<div class="field"><label class="field-label" for="email">Work email *</label><input id="email" name="email" type="email" placeholder="you@company.com" autocomplete="email" maxlength="254" required></div>
+</div>
+<div class="grid">
+<div class="field"><label class="field-label" for="company">Company / Website *</label><input id="company" name="company" type="text" placeholder="Your company" autocomplete="organization" minlength="2" maxlength="180" required></div>
+<div class="field"><label class="field-label" for="contact_role">I am a… *</label><select name="contact_role" id="contact_role" required><option value="" selected disabled>Choose your role</option><option>Business owner / Founder</option><option>CX / Operations leader</option><option>Developer / Agency</option><option>Other</option></select></div>
+</div>
+<div>
+<div class="section-label">How would you use Truffl? <span class="hint">(Choose any)</span></div>
+<div class="choices">
+<label><input type="checkbox" name="use_cases" value="Inbound customer support">Inbound customer support</label>
+<label><input type="checkbox" name="use_cases" value="Outbound sales and follow-ups">Outbound sales &amp; follow-ups</label>
+<label><input type="checkbox" name="use_cases" value="Lead qualification and booking">Lead qualification &amp; booking</label>
+<label><input type="checkbox" name="use_cases" value="Voice AI development and integrations">Voice AI development &amp; integrations</label>
+<label><input type="checkbox" name="use_cases" value="Other">Something else</label>
+</div>
+</div>
+<div class="field"><label class="field-label" for="monthly_call_volume">Expected monthly call volume</label><select id="monthly_call_volume" name="monthly_call_volume"><option>Just exploring</option><option>Under 1,000 calls</option><option>1,000–10,000 calls</option><option>10,000+ calls</option></select></div>
+<div class="field"><label class="field-label" for="biggest_challenge">What would you love to solve? <span class="hint">(Optional)</span></label><textarea name="biggest_challenge" id="biggest_challenge" maxlength="1000" placeholder="Tell us a bit about your use case…"></textarea></div>
+<div class="trap" aria-hidden="true"><label>Leave blank<input name="website_url" tabindex="-1" autocomplete="off"></label></div>
+<label class="consent"><input type="checkbox" name="consent" value="yes" required>I'm happy for Truffl to contact me about early access using the details I provide.</label>
+<button type="submit">Join Truffl Early Access</button>
+</form>
+</section>
+<section id="success-section" class="panel message" aria-labelledby="success-heading">
+<div class="emoji" aria-hidden="true">✨</div><h2 id="success-heading">You're on the list.</h2><p>Thank you for believing conversations can be better. We're reviewing early-access requests and will reach out with next steps.</p><a href="https://trufflinnovations.in/">Explore Truffl</a>
+</section>
+<p class="foot">Made with care by <a href="https://trufflinnovations.in/">Truffl</a>.</p>
+</main>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var rawSource = (params.get('source') || '').toLowerCase().trim();
+  var source = rawSource === 'linkedin' || rawSource === 'gmail' ? rawSource : 'direct';
+  var form = document.getElementById('signup');
+  form.action = 'https://kuelcfztccmaigxvfrbo.supabase.co/functions/v1/truffl-early-access?source=' + source;
+  if (params.get('success') === '1') {
+    document.getElementById('form-section').hidden = true;
+    var success = document.getElementById('success-section');
+    success.classList.add('visible');
+    success.scrollIntoView({block:'nearest'});
+  } else if (params.get('error')) {
+    document.getElementById('error-note').hidden = false;
+  }
+})();
+</script>
+</body>
+</html>
